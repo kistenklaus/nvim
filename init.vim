@@ -1,11 +1,14 @@
-"Keymapping
-source $HOME/.config/nvim/keys/default-mapping.vim
-"Settings
-source $HOME/.config/nvim/settings.vim
 "Autoload
 source $HOME/.config/nvim/plugins.vim
+"Settings
+source $HOME/.config/nvim/settings.vim
+"Keymapping
+source $HOME/.config/nvim/keys/default-mapping.vim
+source $HOME/.config/nvim/keys/which-key.vim
 "Plugins
 source $HOME/.config/nvim/plugins/coc.vim
+source $HOME/.config/nvim/plugins/floaterm.vim
+source $HOME/.config/nvim/plugins/signify.vim
 "Thesmes
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/onedark.vim
