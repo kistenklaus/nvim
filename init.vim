@@ -9,6 +9,8 @@ source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/floaterm.vim
 source $HOME/.config/nvim/plugins/signify.vim
+source $HOME/.config/nvim/plugins/latex-preview.vim
+source $HOME/.config/nvim/plugins/clang-format.vim
 "Thesmes
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/onedark.vim

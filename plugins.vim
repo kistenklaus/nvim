@@ -31,6 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
     "Float-Term
     Plug 'voldikss/vim-floaterm'
+    " Latex Preview !!Doesn't work 
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
     "Which Key
     Plug 'liuchengxu/vim-which-key'

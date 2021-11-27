@@ -25,8 +25,18 @@
                 },
                 "compilationDatabaseDestination": "build"
             }
+        },
+        "latex": {
+            "command": "/PATH/TO/texlab",
+            "filetypes": ["tex", "bib", "plaintex", "context"]
         }
     },
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "c",
+        "tex"
+    ],
     "diagnostic.checkCurrentLine": true,
     "suggest.completionItemKindLabels": {
         "method": "  ",
