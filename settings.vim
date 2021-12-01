@@ -6,6 +6,7 @@ set nowrap
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8 
+filetype on
 
 set expandtab                           " Converts tabs to spaces 
 set ruler              			            " Show the cursor position all the time set tabstop=2 set number
@@ -21,6 +22,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 
 "Check if this actually works!
 set smartindent                         " Makes indenting smart
+
 
 "Disable auto Comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

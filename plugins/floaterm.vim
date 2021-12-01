@@ -11,9 +11,8 @@ let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
 
-let g:which_key_map.a = {
-      \ 'name' : 'apps' ,
-      \ 'f' : [':FloatermNew fzf', 'fzf'],
+let g:which_key_map.t = {
+      \ 'name' : 'floaterm' ,
       \ 'g' : [':FloatermNew lazygit', 'git'],
       \ 'n' : [':FloatermNew node', 'node'],
       \ 'p' : [':FloatermNew python', 'python'],
