@@ -28,3 +28,5 @@ let g:which_key_map['h'] = [ '<C-W>s', 'split below']
 let g:which_key_map['v'] = [ '<C-W>v', 'split right']
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
+
+

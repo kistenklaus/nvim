@@ -9,13 +9,16 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     call plug#begin('~/.config/nvim/autoload/plugged')
 
         " Better Syntax Support
-        Plug 'sheerun/vim-polyglot'
+        " Plug 'sheerun/vim-polyglot'
 
         " Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
         
         "NeoClide
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        "Native LSP
+        "Plug 'neovim/nvim-lspconfig'
+        "Plug 'hrsh7th/nvim-compe'
 
         "Airline
         Plug 'vim-airline/vim-airline'
@@ -42,6 +45,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'junegunn/fzf.vim'
 
         Plug 'airblade/vim-rooter'
+
+        "Rainbow Bracets
+        Plug 'frazrepo/vim-rainbow'
 
 
     call plug#end()

@@ -1,34 +1,13 @@
 {
     "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": [
-                "c",
-                "cpp",
-                "cuda",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls",
-                "compile_commands.json",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                },
-                "client": {
-
-                },
-                "compilationDatabaseDestination": "build"
-            }
-        },
         "latex": {
             "command": "/PATH/TO/texlab",
-            "filetypes": ["tex", "bib", "plaintex", "context"]
+            "filetypes": [
+                "tex",
+                "bib",
+                "plaintex",
+                "context"
+            ]
         }
     },
     "coc.preferences.formatOnSaveFiletypes": [
@@ -64,11 +43,17 @@
         "constructor": "  ",
         "value": "  ",
         "enumMember": "  "
-      },
-     "explorer.width": 30,
-      "explorer.icon.enableNerdfont": true,
-      "explorer.previewAction.onHover": false,
-      "explorer.keyMappings.global": {
-        "<cr>": ["expandable?", "expand", "open"],
+    },
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings.global": {
+        "<cr>": [
+            "expandable?",
+            "expand",
+            "open"
+        ],
         "v": "open:vsplit"
+    },
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

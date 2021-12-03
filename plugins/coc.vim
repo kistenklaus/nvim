@@ -64,21 +64,18 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+
 " Use K to show documentation in preview window.
-nnoremap <silent> . :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
+  if (coc#rpc#ready())
     call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
 " Symbol renaming.
-let g:which_key_map['r'] = [ ':CocCommand coc-rename', "rename"]
+let g:which_key_map['r'] = [ ':CocCommand document.renameCurrentWord', "rename"]
 
 augroup mygroup
   autocmd!
@@ -113,7 +110,8 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+"command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR   :CocCommand editor.action.organizeImport
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -155,6 +153,8 @@ let g:coc_explorer_global_presets = {
 \   }
 \ }
 
-let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer' ]
-let g:which_key_map['f'] = [ ':CocCommand explorer --preset floating', "floating-explorer"]
+let g:coc_default_semantic_highlight_groups = 1
+
+"let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer' ]
+let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating', "floating-explorer"]
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
