@@ -1,8 +1,6 @@
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
-set encoding=utf-8
-" TextEdit might fail if hidden is not set.
-set hidden
+set encoding=utf-8 " TextEdit might fail if hidden is not set.  set hidden
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -105,7 +103,6 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
-
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 

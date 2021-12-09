@@ -13,7 +13,6 @@ source $HOME/.config/nvim/plugins/floaterm.vim
 source $HOME/.config/nvim/plugins/fzf.vim
 source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/latex-preview.vim
-source $HOME/.config/nvim/plugins/clang-format.vim
 source $HOME/.config/nvim/plugins/rainbow.vim
 source $HOME/.config/nvim/plugins/treesitter.vim
 "Plugin-Which-Key-Settings
