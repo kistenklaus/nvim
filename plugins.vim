@@ -9,7 +9,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     call plug#begin('~/.config/nvim/autoload/plugged')
 
         " Better Syntax Support
-        " Plug 'sheerun/vim-polyglot'
+        "Plug 'sheerun/vim-polyglot'
 
         " Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
@@ -34,7 +34,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'junegunn/gv.vim'
         "Float-Term
         Plug 'voldikss/vim-floaterm'
-        " Latex Preview !!Doesn't work 
         Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
         "Which Key
@@ -49,6 +48,12 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Rainbow Bracets
         Plug 'frazrepo/vim-rainbow'
 
+        Plug 'tyru/open-browser.vim'
+        Plug 'weirongxu/plantuml-previewer.vim'
+
+        "Flutter
+        Plug 'thosakwe/vim-flutter'
+        Plug 'dart-lang/dart-vim-plugin'
 
     call plug#end()
 

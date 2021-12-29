@@ -1,7 +1,7 @@
-let g:floaterm_keymap_toggle = '<F1>'
-let g:floaterm_keymap_next   = '<F2>'
-let g:floaterm_keymap_prev   = '<F3>'
-let g:floaterm_keymap_new    = '<F4>'
+nnoremap   <silent>   <F1>    :FloatermNew! cd %:p:h && clear<CR>
+nnoremap   <silent>   <F2>    :FloatermPrev<CR>
+nnoremap   <silent>   <F3>    :FloatermNext<CR>
+nnoremap   <silent>   <F4>   :FloatermToggle<CR>
 
 " Floaterm
 let g:floaterm_gitcommit='floaterm'
@@ -18,6 +18,5 @@ let g:which_key_map.t = {
       \ 'p' : [':FloatermNew python', 'python'],
       \ 'r' : [':FloatermNew ranger', 'ranger'],
       \ 'y' : [':FloatermNew ytop', 'ytop'],
-      \ 's' : [':FloatermNew ncdu', 'ncdu']
+      \ 's' : [':FloatermNew ncdu', 'ncdu'],
       \ }
-"map <F2> :FloatermToggle
