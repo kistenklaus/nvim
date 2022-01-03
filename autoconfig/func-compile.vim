@@ -1,8 +1,8 @@
 function! _Compile()
-    silent write
+    silent wa
     if (isdirectory(".vim-build/"))
         silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
-        !./.vim-build/compile.sh
+        silent terminal ./.vim-build/compile.sh
     else
         echo "No .vim-build Directory"
     endif

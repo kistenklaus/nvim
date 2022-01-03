@@ -26,7 +26,10 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['h'] = [ '<C-W>s', 'split below']
 let g:which_key_map['v'] = [ '<C-W>v', 'split right']
+let g:which_key_map.d = {
+      \ 'name' : 'delte-buffer' ,
+      \ 'd' : [':Close', 'close-buffer'],
+      \ '!' : [':CloseOthers', 'close-others'],
+      \ }
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
-
-

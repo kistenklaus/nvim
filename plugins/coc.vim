@@ -103,6 +103,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+nmap <silent> <C-l> :Format <CR>
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
@@ -154,4 +155,5 @@ let g:coc_default_semantic_highlight_groups = 1
 
 "let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating', "floating-explorer"]
+let g:which_key_map['<CR>'] = [ ':CocAction', "coc-action"]
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

@@ -30,3 +30,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:python3_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/python3")
 
 let g:node_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/node")
+
+command Source execute 'source $HOME/.config/nvim/init.vim'
+
+command CloseOthers execute 'wa!|%bd!|e#|bd!#'
+command Close execute 'wa!|bd!'
