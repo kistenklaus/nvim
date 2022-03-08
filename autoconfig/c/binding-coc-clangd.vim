@@ -1,2 +1,4 @@
 
-map <C-h> :CocCommand clangd.switchSourceHeader<CR>
+source $HOME/.config/nvim/autoconfig/c/a.vim
+
+nmap <C-h> :A<CR>

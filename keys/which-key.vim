@@ -2,11 +2,12 @@
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
-" Create map to add keys to
+" Define prefix dictionary
 let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
+set timeout
+set timeoutlen=1000
 
 
 " Not a fan of floating windows for this
@@ -31,5 +32,10 @@ let g:which_key_map.d = {
       \ 'd' : [':Close', 'close-buffer'],
       \ '!' : [':CloseOthers', 'close-others'],
       \ }
+
+let g:which_key_map.s = {
+        \'name' : 'settings',
+      \ }
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
+

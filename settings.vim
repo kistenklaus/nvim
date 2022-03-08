@@ -20,6 +20,7 @@ set nowritebackup                       " This is recommended by coc
 set timeoutlen=500                      " By default timeoutlen is 1000 ms	-
 set updatetime=300                      " Faster completion
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set splitbelow
 
 "Check if this actually works!
 set smartindent                         " Makes indenting smart
@@ -31,7 +32,8 @@ let g:python3_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/python3")
 
 let g:node_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/node")
 
-command Source execute 'source $HOME/.config/nvim/init.vim'
+let g:neoterm_autoscroll=1
 
+command Source execute 'source $HOME/.config/nvim/init.vim'
 command CloseOthers execute 'wa!|%bd!|e#|bd!#'
 command Close execute 'wa!|bd!'

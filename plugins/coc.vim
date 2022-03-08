@@ -59,7 +59,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 
@@ -71,6 +71,8 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   endif
 endfunction
+command Hover :call <SID>show_documentation()<CR>
+
 
 " Symbol renaming.
 let g:which_key_map['r'] = [ ':CocCommand document.renameCurrentWord', "rename"]
@@ -102,14 +104,19 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+command -nargs=0 Format :call CocAction('format')
 nmap <silent> <C-l> :Format <CR>
 " Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-"command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-command! -nargs=0 OR   :CocCommand editor.action.organizeImport
+"command! -nargs=0 OR   
+":call     CocAction('runCommand', 'editor.action.organizeImport')
+"command OR :CocCommand editor.action.organizeImport
+
+" use `:OR` for organize import of current buffer
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -156,4 +163,6 @@ let g:coc_default_semantic_highlight_groups = 1
 "let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating', "floating-explorer"]
 let g:which_key_map['<CR>'] = [ ':CocAction', "coc-action"]
+let g:which_key_map['o'] = [ ':CocList outline', "coc-outline"]
+let g:which_key_map['c'] = [ ':CocCommand', 'coc-command']
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

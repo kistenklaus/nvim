@@ -8,13 +8,49 @@
                 "plaintex",
                 "context"
             ]
+        },
+        "ccls": {
+            "command": "ccls",
+            "args": [
+                "--log-file=/tmp/ccls.log",
+                "-v=1"
+            ],
+            "filetypes": [
+                "c",
+                "cc",
+                "cpp",
+                "c++",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "./.vim-build/compile_commands.json"
+            ],
+            "initializationOptions": {
+                "index": {
+                    "onChange": true
+                },
+                "cache": {
+                    "directory": "/tmp/ccls"
+                },
+                "client": {
+                    "snippetSupport": true
+                },
+                "highlight": {
+                    "lsRanges": true
+                },
+                "compilationDatabaseDirectory": ".vim-build"
+            }
         }
     },
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
         "markdown",
         "c",
-        "tex"
+        "cpp",
+        "tex",
+        "dart"
     ],
     "diagnostic.checkCurrentLine": true,
     "suggest.completionItemKindLabels": {
@@ -47,6 +83,7 @@
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
+    "explorer.file.showHiddenFiles": true,
     "explorer.keyMappings.global": {
         "<cr>": [
             "expandable?",
@@ -55,5 +92,10 @@
         ],
         "v": "open:vsplit"
     },
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+    "outline.keepWindow":false,
+    "outline.splitCommand":"botright 30vs",
+    "outline.sortBy":"position",
+    "outline.followCursor":true,
+    "outline.checkBufferSwitch":true,
+    "flutter.provider.hot-reload": true
 }

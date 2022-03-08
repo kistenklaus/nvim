@@ -16,3 +16,4 @@ let g:rainbow_guifgs = [
 
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
+let g:which_key_map.s.r = [':RainbowToggle', 'toggle rainbow brackets']

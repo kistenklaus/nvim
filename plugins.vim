@@ -4,6 +4,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
       autocmd VimEnter * PlugInstall
       autocmd VimEnter * PlugInstall | source $MYVIMRC
+      "Commenting
     endif
 
     call plug#begin('~/.config/nvim/autoload/plugged')
@@ -12,10 +13,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Plug 'sheerun/vim-polyglot'
 
         " Treesitter
-        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+        "Plug 'jackguo380/vim-lsp-cxx-highlight'
+
+        Plug 'vim-syntastic/syntastic'
         
         "NeoClide
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'm-pilia/vim-ccls'
         "Native LSP
         "Plug 'neovim/nvim-lspconfig'
         "Plug 'hrsh7th/nvim-compe'
@@ -23,6 +29,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Airline
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
+
+        "Commenting
+        Plug 'numToStr/Comment.nvim'
         
         "One Dark Theme
         Plug 'joshdick/onedark.vim'
@@ -43,7 +52,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plug 'junegunn/fzf.vim'
 
-        Plug 'airblade/vim-rooter'
+        "Plug 'airblade/vim-rooter'
 
         "Rainbow Bracets
         Plug 'frazrepo/vim-rainbow'
@@ -51,9 +60,12 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'tyru/open-browser.vim'
         Plug 'weirongxu/plantuml-previewer.vim'
 
-        "Flutter
-        Plug 'thosakwe/vim-flutter'
-        Plug 'dart-lang/dart-vim-plugin'
+        "NeoTerm
+        Plug 'kassio/neoterm'
+
+        "Minimap
+        "Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
 
     call plug#end()
 
