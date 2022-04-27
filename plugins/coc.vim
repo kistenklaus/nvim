@@ -1,7 +1,6 @@
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8 " TextEdit might fail if hidden is not set.  set hidden
-
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -166,3 +165,6 @@ let g:which_key_map['<CR>'] = [ ':CocAction', "coc-action"]
 let g:which_key_map['o'] = [ ':CocList outline', "coc-outline"]
 let g:which_key_map['c'] = [ ':CocCommand', 'coc-command']
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+
+autocmd User CreatedNewProject CocRestart

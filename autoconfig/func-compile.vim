@@ -1,3 +1,10 @@
+
+function! _OnlyCompile()
+    silent doautocmd User CompileEvent
+    silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
+    exec "!./.vim-build/compile.sh && ~/.config/nvim/autoconfig/move_to_target.sh ".g:executable_name
+endfunction
+
 function! _Compile()
     silent wa
     if (isdirectory(".vim-build/"))
@@ -8,6 +15,7 @@ function! _Compile()
         silent vertical Topen resize=tvsize
         silent Tclear
         silent Texec ./.vim-build/compile.sh
+        silent exec "T ~/.config/nvim/autoconfig/move_to_target.sh ".g:executable_name
     else
         echo "No .vim-build Directory"
     endif
@@ -23,6 +31,7 @@ function! _CompileSplit()
         silent botright Topen resize=thsize
         silent Tclear
         silent Texec ./.vim-build/compile.sh
+        silent exec "T ~/.config/nvim/autoconfig/move_to_target.sh ".g:executable_name
     else
         echo "No .vim-build Directory"
     endif

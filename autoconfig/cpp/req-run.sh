@@ -1,3 +1,3 @@
 #!/usr/bin/bash
-~/.config/nvim/autoconfig/c/req-run.sh
+~/.config/nvim/autoconfig/c/req-run.sh $1
 

@@ -8,20 +8,16 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     endif
 
     call plug#begin('~/.config/nvim/autoload/plugged')
-
-        " Better Syntax Support
-        "Plug 'sheerun/vim-polyglot'
-
         " Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
         "Plug 'jackguo380/vim-lsp-cxx-highlight'
 
-        Plug 'vim-syntastic/syntastic'
+        "Plug 'vim-syntastic/syntastic'
         
         "NeoClide
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'm-pilia/vim-ccls'
+        "Plug 'm-pilia/vim-ccls'
         "Native LSP
         "Plug 'neovim/nvim-lspconfig'
         "Plug 'hrsh7th/nvim-compe'
@@ -37,12 +33,13 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'joshdick/onedark.vim'
 
         "Git integration
-        Plug 'mhinz/vim-signify'
+        "Plug 'mhinz/vim-signify'
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-rhubarb'
         Plug 'junegunn/gv.vim'
         "Float-Term
         Plug 'voldikss/vim-floaterm'
+
         Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
         "Which Key
@@ -64,7 +61,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'kassio/neoterm'
 
         "Minimap
-        "Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+        Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
         "i3 config highlighting
         Plug 'mboughaba/i3config.vim'
@@ -74,7 +71,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Plug 'thosakwe/vim-flutter'
         "Plug 'natebosch/vim-lsc'
         "Plug 'natebosch/vim-lsc-dart'
-        "automaticlly keep window dimensions
+
+        "automaticlly keep window dimensions [doesn't work propper]
         Plug 'kwkarlwang/bufresize.nvim'
         "smarter buffer delete utiltiy
         Plug 'famiu/bufdelete.nvim'

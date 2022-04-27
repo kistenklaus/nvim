@@ -4,3 +4,5 @@ function! _OnEdit()
     endif
 endfunction
 au BufReadPost,BufNewFile * call _OnEdit()
+
+autocmd User CreatedNewProject call _OnEdit()

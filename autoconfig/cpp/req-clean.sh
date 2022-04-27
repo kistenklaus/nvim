@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-~/.config/nvim/autoconfig/c/req-clean.sh
+~/.config/nvim/autoconfig/c/req-clean.sh $1

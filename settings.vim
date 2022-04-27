@@ -32,9 +32,9 @@ set smartindent                         " Makes indenting smart
 "Disable auto Comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-let g:python3_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/python3")
+let g:python3_host_prog = expand("/usr/bin/python3")
 
-let g:node_host_prog = expand("/home/linuxbrew/.linuxbrew/bin/node")
+let g:node_host_prog = expand("/usr/bin/node")
 
 let g:neoterm_autoscroll=1
 
@@ -56,7 +56,7 @@ endfunction
 function! _Close()
     wa!
     Bdelete!
-    while &buftype=="terminal" 
+    while &buftype=="terminal" || &buftype=="nofile" || &buftype=="prompt"
         bnext
         let buffer_count = _NrBufs();
         if buffer_count == 1
