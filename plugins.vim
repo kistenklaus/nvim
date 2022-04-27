@@ -66,6 +66,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Minimap
         "Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
+        "i3 config highlighting
+        Plug 'mboughaba/i3config.vim'
+
+        "Dart/Flutter
+        Plug 'dart-lang/dart-vim-plugin'
+        "Plug 'thosakwe/vim-flutter'
+        "Plug 'natebosch/vim-lsc'
+        "Plug 'natebosch/vim-lsc-dart'
+
 
     call plug#end()
 

@@ -11,3 +11,4 @@ source $HOME/.config/nvim/autoconfig/func-clean.vim
 
 set tabstop=2
 set shiftwidth=2
+
