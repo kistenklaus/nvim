@@ -22,6 +22,10 @@ set updatetime=300                      " Faster completion
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set splitbelow
 
+
+let thsize=10 
+let tvsize=50
+
 "Check if this actually works!
 set smartindent                         " Makes indenting smart
 
@@ -36,4 +40,31 @@ let g:neoterm_autoscroll=1
 
 command Source execute 'source $HOME/.config/nvim/init.vim'
 command CloseOthers execute 'wa!|%bd!|e#|bd!#'
-command Close execute 'wa!|bd!'
+
+function! _NrBufs()
+    let i = bufnr('$')
+    let j = 0
+    while i >= 1
+        if buflisted(i)
+            let j+=1
+        endif
+        let i-=1
+    endwhile
+    return j
+endfunction
+
+function! _Close()
+    wa!
+    Bdelete!
+    while &buftype=="terminal" 
+        bnext
+        let buffer_count = _NrBufs();
+        if buffer_count == 1
+            return
+        endif
+    endwhile
+endfunction
+
+command Close call _Close()
+
+

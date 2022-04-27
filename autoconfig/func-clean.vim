@@ -3,10 +3,11 @@ function! _Clean()
     if(isdirectory(".vim-build/"))
         doautocmd User CleanEvent
         silent exec "!~/.config/nvim/autoconfig/req-clean.sh ".&ft
-        silent set splitbelow
-        silent botright Topen resize=5
+        silent Tclose
+        silent set splitright
+        silent vertical Topen resize=tvsize
+        silent Tclear
         silent Texec ./.vim-build/clean.sh
-        silent Texec exit
     else 
         echo "No .vim-build Directory"
     endif
@@ -18,8 +19,10 @@ function! _CleanSplit()
     if(isdirectory(".vim-build/"))
         doautocmd User CleanEvent
         silent exec "!~/.config/nvim/autoconfig/req-clean.sh ".&ft
-        silent set splitright
-        silent vertical Topen 
+        silent Tclose
+        silent set splitbelow
+        silent botright Topen resize=thsize
+        silent Tclear
         silent Texec ./.vim-build/clean.sh
     else 
         echo "No .vim-build Directory"

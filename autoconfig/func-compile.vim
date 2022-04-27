@@ -3,10 +3,11 @@ function! _Compile()
     if (isdirectory(".vim-build/"))
         silent doautocmd User CompileEvent
         silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
-        silent set splitbelow
-        silent botright Topen resize=5
+        silent Tclose
+        silent set splitright
+        silent vertical Topen resize=tvsize
+        silent Tclear
         silent Texec ./.vim-build/compile.sh
-        silent Texec exit
     else
         echo "No .vim-build Directory"
     endif
@@ -17,8 +18,10 @@ function! _CompileSplit()
     if (isdirectory(".vim-build/"))
         doautocmd User CompileEvent
         silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
-        silent set splitright
-        silent vertical Topen 
+        silent Tclose
+        silent set splitbelow
+        silent botright Topen resize=thsize
+        silent Tclear
         silent Texec ./.vim-build/compile.sh
     else
         echo "No .vim-build Directory"

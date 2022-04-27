@@ -74,6 +74,12 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         "Plug 'thosakwe/vim-flutter'
         "Plug 'natebosch/vim-lsc'
         "Plug 'natebosch/vim-lsc-dart'
+        "automaticlly keep window dimensions
+        Plug 'kwkarlwang/bufresize.nvim'
+        "smarter buffer delete utiltiy
+        Plug 'famiu/bufdelete.nvim'
+        "Debugger
+        Plug 'puremourning/vimspector'
 
 
     call plug#end()

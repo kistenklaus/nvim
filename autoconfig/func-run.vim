@@ -4,11 +4,12 @@ function! _Run()
         silent doautocmd User RunEvent
         silent exec "!~/.config/nvim/autoconfig/req-run.sh ".&ft
         silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
-        set splitbelow
-        silent botright Topen resize=5
+        silent Tclose
+        silent set splitright
+        silent vertical Topen resize=tvsize
+        silent Tclear
         silent Texec ./.vim-build/compile.sh
         silent Texec ./.vim-build/run.sh
-        silent Texec exit
     else 
         echo "No .vim-build Directory"
     endif
@@ -20,8 +21,10 @@ function! _RunSplit()
         silent doautocmd User RunEvent
         silent exec "!~/.config/nvim/autoconfig/req-run.sh ".&ft
         silent exec "!~/.config/nvim/autoconfig/req-compile.sh ".&ft
-        silent set splitright
-        silent vertical Topen 
+        silent Tclose
+        silent set splitbelow
+        silent botright Topen resize=thsize
+        silent Tclear
         silent Texec ./.vim-build/compile.sh
         silent Texec ./.vim-build/run.sh
     else 

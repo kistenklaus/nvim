@@ -3,14 +3,32 @@ nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
-
 " TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
+function! _NextBuffer()
+    if &buftype=="terminal"
+        return
+    endif
+    :bnext
+    while &buftype==#"terminal"
+        :bnext
+    endwhile
+endfunction
+nnoremap <TAB> :call _NextBuffer()<CR>
 " SHIFT-TAB will go back
-nnoremap <S-TAB> :bprev<CR>
 
-tnoremap <Esc> <C-\><C-n>:q!<CR>
-tnoremap <C-n> <C-\><C-n>
+
+function! _PrevBuffer()
+    if &buftype=="terminal"
+        return
+    endif
+    :bprev
+    while &buftype==#"terminal"
+        :bprev
+    endwhile
+endfunction
+nnoremap <S-TAB> :call _PrevBuffer()<CR>
+
+tnoremap <Esc> <C-\><C-n>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>

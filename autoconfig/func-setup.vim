@@ -4,10 +4,10 @@ function! _Setup()
     if(isdirectory(".vim-build/"))
         doautocmd User SetupEvent
         silent exec "!~/.config/nvim/autoconfig/req-setup.sh ".&ft
-        set splitbelow
-        silent botright Topen resize=5
+        silent Tclose
+        set splitright
+        silent vertical Topen resize=tvsize
         silent Texec ./.vim-build/setup.sh
-        silent Texec exit
     else 
         echo "No .vim-build Directory"
     endif
