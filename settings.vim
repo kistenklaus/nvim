@@ -39,7 +39,7 @@ let g:node_host_prog = expand("/usr/bin/node")
 let g:neoterm_autoscroll=1
 
 command Source execute 'source $HOME/.config/nvim/init.vim'
-command CloseOthers execute 'wa!|%bd!|e#|bd!#'
+" command CloseOthers execute 'wa!|%bd!|e#|bd!#'
 
 function! _NrBufs()
     let i = bufnr('$')
@@ -65,6 +65,14 @@ function! _Close()
     endwhile
 endfunction
 
-command Close call _Close()
+function! _CloseOthers()
+    wa!
+    %bd!
+    e#
+    bd!#
+    "reopen at the correct line
+endfunction
 
+command Close call _Close()
+command CloseOthers call _CloseOthers()
 

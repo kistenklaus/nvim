@@ -8,6 +8,7 @@ function! _Clean()
         silent vertical Topen resize=tvsize
         silent Tclear
         silent Texec ./.vim-build/clean.sh
+        silent !rm target/ -r -f
     else 
         echo "No .vim-build Directory"
     endif
@@ -24,6 +25,7 @@ function! _CleanSplit()
         silent botright Topen resize=thsize
         silent Tclear
         silent Texec ./.vim-build/clean.sh
+        silent !rm target/ -r -f
     else 
         echo "No .vim-build Directory"
     endif

@@ -30,7 +30,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'numToStr/Comment.nvim'
         
         "One Dark Theme
-        Plug 'joshdick/onedark.vim'
+        Plug 'rafi/awesome-vim-colorschemes'
 
         "Git integration
         "Plug 'mhinz/vim-signify'
@@ -78,6 +78,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
         Plug 'famiu/bufdelete.nvim'
         "Debugger
         Plug 'puremourning/vimspector'
+        
+        "glsl syntax support
+        Plug 'Eric-Song-Nop/vim-glslx'
 
 
     call plug#end()

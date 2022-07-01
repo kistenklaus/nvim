@@ -7,6 +7,7 @@ source $HOME/.config/nvim/settings.vim
 "Keymapping
 source $HOME/.config/nvim/keys/default-mapping.vim
 source $HOME/.config/nvim/keys/which-key.vim
+source $HOME/.config/nvim/keys/loc.vim
 "Plugins
 
 source $HOME/.config/nvim/plugins/coc.vim
@@ -23,6 +24,8 @@ source $HOME/.config/nvim/plugins/floaterm.vim
 source $HOME/.config/nvim/plugins/fzf.vim
 "source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/latex-preview.vim
+source $HOME/.config/nvim/plugins/plantuml.vim
+source $HOME/.config/nvim/plugins/open-browser.vim
 source $HOME/.config/nvim/plugins/rainbow.vim
 source $HOME/.config/nvim/plugins/neoterm.vim
 source $HOME/.config/nvim/plugins/minimap.vim
@@ -32,5 +35,11 @@ source $HOME/.config/nvim/plugins/vimspector.vim
 "Thesmes
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/onedark.vim
+" source $HOME/.config/nvim/themes/minimalist.vim
+" source $HOME/.config/nvim/themes/molokai.vim
+" source $HOME/.config/nvim/themes/one.vim
+" source $HOME/.config/nvim/themes/tender.vim
+" source $HOME/.config/nvim/themes/firewatch.vim
 "Autoconfig
 source $HOME/.config/nvim/autoconfig/autoconfig.vim
+

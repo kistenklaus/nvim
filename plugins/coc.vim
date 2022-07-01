@@ -2,7 +2,7 @@
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8 " TextEdit might fail if hidden is not set.  set hidden
 " Some servers have issues with backup files, see #649.
-set nobackup
+set nobackup 
 set nowritebackup
 
 " Give more space for displaying messages.
@@ -168,3 +168,6 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 
 
 autocmd User CreatedNewProject CocRestart
+
+" fix glsl filetype
+autocmd! BufNewFile,BufRead *.vs,*.fs,*.glsl,*.frag,*.vert set ft=glslx
